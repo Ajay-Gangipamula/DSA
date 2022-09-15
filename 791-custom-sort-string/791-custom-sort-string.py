@@ -1,5 +1,5 @@
 from functools import cmp_to_key
-def compare(t1,t2):
+def compare(t1:Tuple,t2:Tuple)->int:
     if(t1[0]<t2[0]):
         return -1
     if(t1[0] > t2[0]):
