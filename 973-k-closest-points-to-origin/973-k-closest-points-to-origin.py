@@ -11,4 +11,8 @@ def compare(k1:list,k2:list)->int:
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         points.sort(key=cmp_to_key(compare))
-        return points[:k]
+        l2=[]
+        for i in range(k):
+            l2.append(points[i])
+        return l2
+        #return points[:k]
