@@ -1,5 +1,5 @@
 from functools import cmp_to_key
-def compare(t1:tuple,t2:tuple)->int:
+def compare(t1,t2):
     if(t1[0]<t2[0]):
         return -1
     if(t1[0] > t2[0]):
@@ -11,7 +11,6 @@ class Solution:
         rank=[100000]*26
         for i in range(len(order)):
             rank[ord(order[i])-ord('a')]=i
-        #rint(rank)
         l=[]
         for i in range(len(s)):
             l.append((rank[ord(s[i])-ord('a')],s[i]))
