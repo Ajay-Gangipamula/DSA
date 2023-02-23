@@ -1,7 +1,7 @@
 def mergesort(arr,i,j,count):
 	if(i>=j):
 		return
-	m=i+(j-i)//2
+	m=(i+j)//2
 	mergesort(arr,i,m,count)
 	mergesort(arr,m+1,j,count)
 	merge(arr,i,m,m+1,j,count)
