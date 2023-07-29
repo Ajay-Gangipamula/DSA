@@ -31,10 +31,7 @@ class Solution:
                 break
         '''
         if(end==0 and nums[0]==0):
-            countofzeros=1
-
-        if(freq[0]==len(nums) and k==0):
-            return 0'''
+            countofzeros=1'''
 
         start=0
         maxm=end-start+1
