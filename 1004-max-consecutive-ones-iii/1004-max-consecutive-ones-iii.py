@@ -1,6 +1,5 @@
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
-        #freq=[0]*2
         countofzeros=0
         end=0
         countofones=0
