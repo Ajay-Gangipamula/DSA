@@ -1,6 +1,6 @@
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
-        freq=[0]*2
+        #freq=[0]*2
         countofzeros=0
         end=0
         countofones=0
@@ -14,9 +14,6 @@ class Solution:
                     tempcount=0
                 maxi1=max(maxi1,tempcount)
             return maxi1
-
-        for i in range(len(nums)):
-            freq[nums[i]]+=1
 
         for i in range(len(nums)):
             if(nums[i]==0):
