@@ -29,9 +29,6 @@ class Solution:
             if(i==len(nums)-1):
                 end=i
                 break
-        '''
-        if(end==0 and nums[0]==0):
-            countofzeros=1'''
 
         start=0
         maxm=end-start+1
