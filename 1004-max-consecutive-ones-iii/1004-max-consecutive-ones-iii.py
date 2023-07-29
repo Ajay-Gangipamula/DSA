@@ -13,7 +13,6 @@ class Solution:
                 else:
                     tempcount=0
                 maxi1=max(maxi1,tempcount)
-                print(i,tempcount,maxi1,nums,len(nums))
             return maxi1
         for i in range(len(nums)):
             freq[nums[i]]+=1
@@ -38,7 +37,6 @@ class Solution:
 
         start=0
         maxm=end-start+1
-        print('hello',start,end,maxm,countofzeros,countofones)
         while(end<len(nums)):
             while(countofzeros > k):
                 if(nums[start]==0):
@@ -52,6 +50,5 @@ class Solution:
             if(end<len(nums)):
                 if(nums[end]==0):
                     countofzeros+=1
-            print('hai',start,end,countofzeros,maxm)
             
         return maxm
