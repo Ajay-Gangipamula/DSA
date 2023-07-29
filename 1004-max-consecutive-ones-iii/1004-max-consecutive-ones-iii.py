@@ -14,6 +14,7 @@ class Solution:
                     tempcount=0
                 maxi1=max(maxi1,tempcount)
             return maxi1
+
         for i in range(len(nums)):
             freq[nums[i]]+=1
 
@@ -21,7 +22,6 @@ class Solution:
             if(nums[i]==0):
                 countofzeros+=1
                 if(countofzeros==k):
-                    print(countofones)
                     end=i
                     break
             else:
@@ -29,11 +29,12 @@ class Solution:
             if(i==len(nums)-1):
                 end=i
                 break
+        '''
         if(end==0 and nums[0]==0):
             countofzeros=1
 
         if(freq[0]==len(nums) and k==0):
-            return 0
+            return 0'''
 
         start=0
         maxm=end-start+1
