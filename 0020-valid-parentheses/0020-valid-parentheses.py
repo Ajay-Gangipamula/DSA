@@ -8,9 +8,7 @@ class Solution:
             if s[i]=='{' or s[i]=='[' or s[i]=='(':
                 stack.append(s[i])
             else:
-                if(len(stack)==0):
-                    return False
-                if((s[i]=='}' and stack[-1]=='{') or (s[i]==')' and stack[-1]=='(') or (s[i]==']' and stack[-1]=='[')):
+                if(len(stack)!=0 and ((s[i]=='}' and stack[-1]=='{') or (s[i]==')' and stack[-1]=='(') or (s[i]==']' and stack[-1]=='['))):
                     if(len(stack)!=0):
                         stack.pop()
                 else:
