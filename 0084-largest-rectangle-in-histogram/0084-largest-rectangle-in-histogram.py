@@ -11,7 +11,6 @@ class Solution:
         while(len(stk)!=0):
             nse[stk[-1]]=len(heights)
             stk.pop()
-        print(nse)
         pse=[0]*len(heights)
         for i in range(len(heights)-1,-1,-1):
             while(len(stk)!=0 and heights[i]<heights[stk[-1]]):
@@ -21,7 +20,6 @@ class Solution:
         while(len(stk)!=0):
             pse[stk[-1]]=-1
             stk.pop()
-        print(pse)
         maxarea=0
         for i in range(len(heights)):
             maxarea=max((nse[i]-pse[i]-1)*heights[i], maxarea)
