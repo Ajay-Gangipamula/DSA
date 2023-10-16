@@ -1,3 +1,4 @@
+from collections import deque
 class Solution:
     def sumSubarrayMins(self, arr: List[int]) -> int:
         m=10**9 +7
