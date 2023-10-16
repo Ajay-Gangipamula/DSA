@@ -5,7 +5,7 @@ class Solution:
         n=len(arr)
         nse=[0]*n
         psoe=[0]*n
-        stk=[]
+        stk=deque()
         stk.append(0)
         for i in range(1,n):
             while(len(stk)!=0 and arr[i]<arr[stk[-1]]):
