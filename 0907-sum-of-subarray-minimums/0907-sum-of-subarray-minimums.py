@@ -28,7 +28,7 @@ class Solution:
 
         sum1=0
         for i in range(n):
-            x1=(i-psoe[i])
+            x1=i-psoe[i]
             x2=nse[i]-i
             x= (((x1%m * x2%m)%m) * (arr[i]%m))%m
             sum1=(sum1%m + x%m)%m
