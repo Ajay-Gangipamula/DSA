@@ -11,18 +11,13 @@ class MyQueue:
         self.s1.append(x)
 
     def pop(self) -> int:
-        print(self.s1,self.s2,'stack1, stack2')
         while(len(self.s1)!=0):
             self.s2.append(self.s1[-1])
             self.s1.pop()
         ans=self.s2[-1]
-        print(self.s1,self.s2,'stack1, stack2, ans',ans,self.front)
         self.s2.pop()
         if(len(self.s2)!=0):
-            print(self.s1,self.s2,'stack1, stack2',self.front)
             self.front=self.s2[-1]
-            print(self.s1,self.s2,'stack1, stack2',self.front)
-        print(self.s1,self.s2,'stack1, stack2',self.front)
         while(len(self.s2)!=0):
             self.s1.append(self.s2[-1])
             self.s2.pop()
