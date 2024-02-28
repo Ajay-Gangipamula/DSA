@@ -20,4 +20,3 @@ class Solution:
             return head
         head3=recurse(head)
         return head3
-        return recurse(head)
