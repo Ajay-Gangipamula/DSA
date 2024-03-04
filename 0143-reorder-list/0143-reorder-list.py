@@ -3,25 +3,6 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class LinkedList:
-    def __init__(self,val):
-        self.val=val
-        self.next=None
-
-
-def execute():
-    tail=LinkedList(4)
-    tail.next=LinkedList(5)
-    tail.next.next=LinkedList(7)
-    print("printing tail")
-    please_print(tail)
-    temp=tail
-    print("printing temp")
-    please_print(temp)
-    h=LinkedList(785)
-    temp.next=h
-    please_print(temp)
-    please_print(tail)
 
 def getMid(head):
     slow=head
@@ -41,13 +22,6 @@ def reverse(p):
         curr=temp
     return prev
 
-def please_print(tmp):
-    #print("printing head")
-    while(tmp):
-        print(tmp.val,"->",end=" ")
-        tmp=tmp.next
-    print()
-
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
@@ -58,8 +32,6 @@ class Solution:
         t=reverse(mid)
         h=temp.next
         tail=head
-        print("printing tail")
-        please_print(tail)
         while(h and t):
             tail.next=t
             t=t.next
