@@ -25,11 +25,6 @@ def recurse(p,k1,k):
         return p
     temp1=p
     tail=p
-    '''while(temp1):
-        
-        print(temp1.val,end=" ")
-        temp1=temp1.next
-    print()'''
     l=1
     while(tail and l<k):
         l+=1
@@ -38,15 +33,8 @@ def recurse(p,k1,k):
     temp2=tail.next
     tail.next=None
     p2=reverse(temp1)
-    #print('printing p2 and temp1')
-    #please_print(p2)
-    #please_print(temp1)
-    #print('printing temp2')
-    #please_print(temp2)
     p1=recurse(temp2,k1-k,k)
     temp1.next=p1
-    #print('printing temp1')
-    #please_print(temp1)
     return tail1
 
 class Solution:
