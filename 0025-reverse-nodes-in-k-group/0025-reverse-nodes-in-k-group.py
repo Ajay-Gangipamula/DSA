@@ -14,12 +14,6 @@ def reverse(q):
         curr=temp
     return prev
 
-def please_print(tempora):
-    while(tempora):
-        print(tempora.val,"->",end="")
-        tempora=tempora.next
-    print()
-
 def recurse(p,k1,k):
     if(k1<k):
         return p
