@@ -15,6 +15,7 @@ def roottoleaf(root,tmp,ans):
         tmp+="->"+str(root.val)
     if((not root.left) and (not root.right)):
         ans.append(tmp)
+    print(tmp)
     roottoleaf(root.left,tmp,ans)
     roottoleaf(root.right,tmp,ans)
 
