@@ -9,7 +9,7 @@
 def roottoleaf(root,tmp,ans):
     if(not root):
         return
-    if(len(tmp))==0:
+    if(len(tmp)==0):
         tmp+=str(root.val)
     else:
         tmp+="->"+str(root.val)
