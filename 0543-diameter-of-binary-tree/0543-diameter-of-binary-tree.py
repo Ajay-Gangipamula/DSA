@@ -5,25 +5,22 @@
 #         self.left = left
 #         self.right = right
 
+class answer:
+    def __init__(self,ans=0):
+        self.ans=ans
 
-def height(root,d):
+def height(root,answer):
     if(not root):
         return 0
-    h1=height(root.left,d)
-    h2=height(root.right,d)
-    d[root]=1+max(h1,h2)
+    h1=height(root.left,answer)
+    h2=height(root.right,answer)
+    answer.ans=max(answer.ans,1+h1+h2)
     return 1+max(h1,h2)
-
-
-def getdia(root,d):
-    if(not root):
-        return 0
-    return max(1+d[root.left]+d[root.right],getdia(root.left,d),getdia(root.right,d))
 
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        d={None: 0}
-        height(root,d)
         if(not root):
             return 0
-        return getdia(root,d)-1
+        answer.ans=0
+        height(root,answer)
+        return answer.ans-1
