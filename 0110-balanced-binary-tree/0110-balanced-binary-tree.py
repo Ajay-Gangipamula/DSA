@@ -6,22 +6,15 @@
 #         self.right = right
 
 
-class mainanswer:
-    def __init__(self,ans):
-        self.ans=ans
-
-def heightbalanced(root,answer):
+def heightbalanced(root):
     if(not root):
-        return 0
-    h1=heightbalanced(root.left,answer)
-    h2=heightbalanced(root.right,answer)
-    if(abs(h1-h2)>1):
-        answer.ans=False
-    return 1+max(h1,h2)
+        return (True,0)
+    lst=heightbalanced(root.left)
+    rst=heightbalanced(root.right)
+    f=lst[0] and rst[0] and (abs(lst[1]-rst[1])<=1)
+    return (f,1+max(lst[1],rst[1]))
 
 
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        answer=mainanswer(True)
-        heightbalanced(root,answer)
-        return answer.ans
+        return heightbalanced(root)[0]
